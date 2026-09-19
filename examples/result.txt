@@ -1,0 +1,89 @@
+[
+  {
+    "conversation_id": "conversation-mapping",
+    "conversation_title": "Workshop notes",
+    "conversation_create_time": 90,
+    "conversation_create_time_iso": "1970-01-01T00:01:30Z",
+    "node_id": "old-1",
+    "parent_id": null,
+    "children_ids": [],
+    "role": "user",
+    "sender": "User",
+    "create_time": 101,
+    "create_time_iso": "1970-01-01T00:01:41Z",
+    "content_type": "text",
+    "content_parts": [
+      "Put the soldering station in the workshop."
+    ],
+    "content_text": "Put the soldering station in the workshop.",
+    "hidden": false,
+    "model_slug": null,
+    "status": null,
+    "end_turn": null,
+    "sequence_in_conversation": 1,
+    "conversation_index": 2,
+    "sort_timestamp": 101.0,
+    "gidx": 1,
+    "targets": [
+      "project:GardenWatch"
+    ]
+  },
+  {
+    "conversation_id": "conversation-new",
+    "conversation_title": "Garden sensor",
+    "conversation_create_time": 100,
+    "conversation_create_time_iso": "1970-01-01T00:01:40Z",
+    "node_id": "new-1",
+    "parent_id": null,
+    "children_ids": [],
+    "role": "user",
+    "sender": "User",
+    "create_time": 102,
+    "create_time_iso": "1970-01-01T00:01:42Z",
+    "content_type": "text",
+    "content_parts": [
+      "Could the GardenWatch project record soil moisture?"
+    ],
+    "content_text": "Could the GardenWatch project record soil moisture?",
+    "hidden": false,
+    "model_slug": null,
+    "status": null,
+    "end_turn": null,
+    "sequence_in_conversation": 1,
+    "conversation_index": 1,
+    "sort_timestamp": 102.0,
+    "gidx": 2,
+    "targets": [
+      "project:GardenWatch"
+    ]
+  },
+  {
+    "conversation_id": "conversation-new",
+    "conversation_title": "Garden sensor",
+    "conversation_create_time": 100,
+    "conversation_create_time_iso": "1970-01-01T00:01:40Z",
+    "node_id": "new-2",
+    "parent_id": null,
+    "children_ids": [],
+    "role": "assistant",
+    "sender": "Assistant",
+    "create_time": 103,
+    "create_time_iso": "1970-01-01T00:01:43Z",
+    "content_type": "text",
+    "content_parts": [
+      "Yes, the sensor can publish a bounded reading."
+    ],
+    "content_text": "Yes, the sensor can publish a bounded reading.",
+    "hidden": false,
+    "model_slug": null,
+    "status": null,
+    "end_turn": null,
+    "sequence_in_conversation": 2,
+    "conversation_index": 1,
+    "sort_timestamp": 103.0,
+    "gidx": 3,
+    "targets": [
+      "project:GardenWatch"
+    ]
+  }
+]

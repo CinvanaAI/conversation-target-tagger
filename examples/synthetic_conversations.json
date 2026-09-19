@@ -1,0 +1,37 @@
+[
+  {
+    "id": "conversation-new",
+    "title": "Garden sensor",
+    "create_time": 100,
+    "messages": [
+      {
+        "id": "new-1",
+        "author": {"role": "user"},
+        "create_time": 102,
+        "content": {"content_type": "text", "parts": ["Could the GardenWatch project record soil moisture?"]}
+      },
+      {
+        "id": "new-2",
+        "author": {"role": "assistant"},
+        "create_time": 103,
+        "content": {"content_type": "text", "parts": ["Yes, the sensor can publish a bounded reading."]}
+      }
+    ]
+  },
+  {
+    "id": "conversation-mapping",
+    "title": "Workshop notes",
+    "create_time": 90,
+    "mapping": {
+      "old-1": {
+        "parent": null,
+        "children": [],
+        "message": {
+          "author": {"role": "user"},
+          "create_time": 101,
+          "content": {"content_type": "text", "parts": ["Put the soldering station in the workshop."]}
+        }
+      }
+    }
+  }
+]

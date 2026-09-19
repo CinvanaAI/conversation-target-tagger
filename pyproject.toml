@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conversation-target-tagger"
+version = "1.0.0"
+description = "Strict chronological target tagging for ChatGPT exports with a local Ollama model."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE.md"]
+
+[project.scripts]
+conversation-target-tagger = "conversation_target_tagger.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["conversation_target_tagger*"]
