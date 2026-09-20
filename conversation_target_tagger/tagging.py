@@ -79,7 +79,7 @@ def parse_and_validate(response: str, expected_gidxs: tuple[int, ...]) -> list[d
         raise ValueError("Tagger response count does not match the requested messages.")
     validated: list[dict] = []
     for expected, item in zip(expected_gidxs, payload, strict=True):
-        if not isinstance(item, dict) or item.get("gidx") != expected:
+        if not isinstance(item, dict) or type(item.get("gidx")) is not int or item.get("gidx") != expected:
             raise ValueError(f"Tagger response is not aligned at gidx {expected}.")
         targets = item.get("targets")
         if not isinstance(targets, list) or len(targets) > 3:
@@ -91,8 +91,10 @@ def parse_and_validate(response: str, expected_gidxs: tuple[int, ...]) -> list[d
             prefix = value.split(":", 1)[0]
             if prefix not in TARGET_PREFIXES:
                 raise ValueError(f"Unsupported target prefix for gidx {expected}: {prefix}")
-            if prefix in {"participant", "person_external", "org", "project", "idea", "place", "thing"} and ":" not in value:
+            if prefix in {"participant", "person_external", "org", "project", "idea", "place", "thing"} and (":" not in value or not value.split(":", 1)[1].strip()):
                 raise ValueError(f"Target label requires a value for gidx {expected}: {value}")
+            if prefix in {"self", "other", "ambiguous"} and value != prefix:
+                raise ValueError(f"Target label takes no suffix for gidx {expected}: {value}")
             clean.append(value)
         if len(clean) != len(set(clean)):
             raise ValueError(f"Duplicate target labels for gidx {expected}.")

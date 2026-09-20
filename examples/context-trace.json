@@ -1,0 +1,37 @@
+[
+  {
+    "target_indices": [
+      1,
+      2
+    ],
+    "prompt": "Participants: [\"User\", \"Assistant\"]\n[CTX] lines are context only. [MSG] lines require output.\n[MSG] [1] User: Put the soldering station in the workshop.\n[MSG] [2] User: Could the GardenWatch project record soil moisture?\nTARGET_GIDXS: [1, 2]",
+    "authored_response": [
+      {
+        "gidx": 1,
+        "targets": [
+          "place:Workshop"
+        ]
+      },
+      {
+        "gidx": 2,
+        "targets": [
+          "project:GardenWatch"
+        ]
+      }
+    ]
+  },
+  {
+    "target_indices": [
+      3
+    ],
+    "prompt": "Participants: [\"User\", \"Assistant\"]\n[CTX] lines are context only. [MSG] lines require output.\n[CTX] [2] User: Could the GardenWatch project record soil moisture?\n[MSG] [3] Assistant: Yes, the sensor can publish a bounded reading.\nTARGET_GIDXS: [3]",
+    "authored_response": [
+      {
+        "gidx": 3,
+        "targets": [
+          "project:GardenWatch"
+        ]
+      }
+    ]
+  }
+]
